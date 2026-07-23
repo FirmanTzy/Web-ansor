@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - GP Ansor Ranting Kujorowesi</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "ansor-green": "#004d00",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Smooth scrolling for any anchors */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Better focus visibility */
+      :focus-visible {
+        outline: 3px solid rgba(0, 128, 0, 0.45);
+        outline-offset: 2px;
+      }
+
+      /* Prevent body scroll behind fixed sidebar on small screens */
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+
+  <body class="bg-emerald-50 text-slate-900">
+    <div class="min-h-screen">
+      <!-- Sidebar -->
+      <aside
+        class="fixed inset-y-0 left-0 z-40 w-64 transform -translate-x-full md:translate-x-0 md:static md:inset-0 bg-ansor-green text-white transition-transform"
+        id="sidebar"
+        aria-label="Sidebar">
+        <div class="flex items-center gap-3 px-5 py-5">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/15">
+            <span class="font-extrabold tracking-tight text-white">GP</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold leading-tight">GP Ansor</p>
+            <p class="text-xs text-white/70">Admin Panel</p>
+          </div>
+        </div>
+
+        <nav class="px-3 pb-5">
+          <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-semibold bg-white/10 ring-1 ring-white/10">
+            <!-- icon -->
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 12l9-9 9 9" />
+              <path d="M9 21V9h6v12" />
+            </svg>
+            Dashboard
+          </a>
+
+          <a href="#" class="mt-1 flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10 hover:ring-1 hover:ring-white/15">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Data Anggota
+          </a>
+
+          <a href="#" class="mt-1 flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10 hover:ring-1 hover:ring-white/15">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 7h18" />
+              <path d="M9 7v14" />
+              <path d="M15 7v14" />
+              <path d="M5 21h14" />
+            </svg>
+            Inventaris Banser
+          </a>
+
+          <a href="#" class="mt-1 flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10 hover:ring-1 hover:ring-white/15">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <path d="M16 2v4" />
+              <path d="M8 2v4" />
+              <path d="M3 10h18" />
+            </svg>
+            Jadwal Kegiatan
+          </a>
+
+          <a href="#" class="mt-1 flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-white/90 hover:bg-white/10 hover:ring-1 hover:ring-white/15">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 15l2-2-2-2-2 2 2 2z" />
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 8.9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 8.9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8.9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82 1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            Pengaturan
+          </a>
+        </nav>
+
+        <div class="px-5 pb-5">
+          <a href="./index.html" class="inline-flex w-full items-center justify-center rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/15 transition">
+            Kembali ke Website
+          </a>
+        </div>
+      </aside>
+
+      <!-- Backdrop for mobile sidebar -->
+      <div class="fixed inset-0 z-30 hidden bg-black/30" id="backdrop"></div>
+
+      <!-- Main -->
+      <div class="md:pl-64">
+        <!-- Header -->
+        <header class="sticky top-0 z-20 bg-white/95 backdrop-blur border-b border-emerald-100">
+          <div class="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3">
+              <button
+                class="md:hidden inline-flex items-center justify-center rounded-xl border border-emerald-200 bg-white px-3 py-2"
+                id="menuBtn"
+                aria-label="Open sidebar"
+              >
+                <svg class="h-5 w-5 text-ansor-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 6h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 18h16" />
+                </svg>
+              </button>
+
+              <div class="leading-tight">
+                <p class="text-sm font-semibold text-slate-900">Admin Dashboard</p>
+                <p class="text-xs text-slate-500">GP Ansor Ranting Kujorowesi</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <!-- Search -->
+              <div class="relative hidden sm:block">
+                <input
+                  type="text"
+                  placeholder="Cari aktivitas, anggota, jadwal..."
+                  class="w-72 rounded-2xl border border-emerald-200 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-islamic-green focus:ring-4 focus:ring-islamic-green/10"
+                  aria-label="Search" />
+                <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="M21 21l-4.3-4.3" />
+                </svg>
+              </div>
+
+              <!-- Notification -->
+              <button class="relative inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-emerald-200 bg-white hover:bg-emerald-50 transition" aria-label="Notifications">
+                <span class="absolute right-2 top-2 block h-2.5 w-2.5 rounded-full bg-islamic-green" aria-hidden="true"></span>
+                <svg class="h-5 w-5 text-ansor-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+              </button>
+
+              <!-- Profile dropdown -->
+              <div class="relative">
+                <button id="profileBtn" class="inline-flex items-center gap-2 rounded-2xl border border-emerald-200 bg-white px-3 py-2 hover:bg-emerald-50 transition" aria-label="Admin profile">
+                  <div class="h-9 w-9 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                    <svg class="h-5 w-5 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </div>
+                  <span class="hidden lg:inline text-sm font-semibold text-slate-700">Admin</span>
+                  <svg class="h-4 w-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div id="profileMenu" class="absolute right-0 mt-2 hidden w-56 rounded-2xl border border-emerald-100 bg-white shadow-sm">
+                  <div class="px-4 py-3">
+                    <p class="text-sm font-bold text-slate-900">GP Ansor</p>
+                    <p class="text-xs text-slate-500">Ranting Kujorowesi</p>
+                  </div>
+                  <div class="border-t border-emerald-100" />
+                  <a href="#" class="block px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-emerald-50 transition">Profil</a>
+                  <a href="#" class="block px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-emerald-50 transition">Pengaturan</a>
+                  <a href="#" class="block px-4 py-3 text-sm font-semibold text-islamic-green hover:bg-emerald-50 transition">Keluar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <main class="px-4 py-7 sm:px-6 lg:px-8">
+          <!-- Summary cards -->
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-3xl bg-white p-5 ring-1 ring-emerald-100">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-semibold text-slate-500">Total Anggota</p>
+                  <p class="mt-2 text-3xl font-extrabold text-slate-900">1.284</p>
+                  <p class="mt-2 text-sm text-slate-600">Aktif & terdaftar</p>
+                </div>
+                <div class="h-11 w-11 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                  <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl bg-white p-5 ring-1 ring-emerald-100">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-semibold text-slate-500">Kegiatan Mendatang</p>
+                  <p class="mt-2 text-3xl font-extrabold text-slate-900">7</p>
+                  <p class="mt-2 text-sm text-slate-600">Dalam 30 hari</p>
+                </div>
+                <div class="h-11 w-11 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                  <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <path d="M16 2v4" />
+                    <path d="M8 2v4" />
+                    <path d="M3 10h18" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl bg-white p-5 ring-1 ring-emerald-100">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-semibold text-slate-500">Kas Organisasi</p>
+                  <p class="mt-2 text-3xl font-extrabold text-slate-900">Rp 56 jt</p>
+                  <p class="mt-2 text-sm text-slate-600">Terhitung hari ini</p>
+                </div>
+                <div class="h-11 w-11 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                  <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10H3" />
+                    <path d="M21 14H3" />
+                    <path d="M14 6V18" />
+                    <path d="M10 6V18" />
+                    <path d="M8 6h8" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl bg-white p-5 ring-1 ring-emerald-100">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="text-xs font-semibold text-slate-500">Laporan Masuk</p>
+                  <p class="mt-2 text-3xl font-extrabold text-slate-900">12</p>
+                  <p class="mt-2 text-sm text-slate-600">Menunggu verifikasi</p>
+                </div>
+                <div class="h-11 w-11 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                  <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6" />
+                    <path d="M10 13h4" />
+                    <path d="M10 17h4" />
+                    <path d="M10 9h4" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <section class="mt-7 rounded-3xl bg-white ring-1 ring-emerald-100">
+            <div class="flex flex-col gap-4 border-b border-emerald-100 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p class="text-sm font-bold text-slate-900">Recent Activities</p>
+                <p class="text-xs text-slate-500">Ringkasan aktivitas terbaru pada sistem</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <button class="inline-flex items-center gap-2 rounded-2xl border border-emerald-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-emerald-50 transition">
+                  <svg class="h-4 w-4 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Export
+                </button>
+
+                <button class="inline-flex items-center gap-2 rounded-2xl bg-islamic-green px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                  Tambah
+                </button>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <div id="membersTableLoading" class="hidden px-5 py-4">
+                <p class="text-sm font-semibold text-slate-700">Loading anggota...</p>
+              </div>
+              <table class="min-w-full">
+                <thead>
+                  <tr class="bg-emerald-50 text-left text-xs font-bold text-slate-600">
+                    <th class="px-5 py-3">Date</th>
+                    <th class="px-5 py-3">Activity Name</th>
+                    <th class="px-5 py-3">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-emerald-100 text-sm">
+                  <tr>
+                    <td class="px-5 py-4 text-slate-700">12 Mei 2026</td>
+                    <td class="px-5 py-4 font-semibold text-slate-900">Dzikir Mingguan</td>
+                    <td class="px-5 py-4">
+                      <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-3 py-1 text-xs font-bold text-islamic-green ring-1 ring-islamic-green/20">Selesai</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-4 text-slate-700">10 Mei 2026</td>
+                    <td class="px-5 py-4 font-semibold text-slate-900">Pelatihan Banser</td>
+                    <td class="px-5 py-4">
+                      <span class="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-700 ring-1 ring-sky-200">Dijadwalkan</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-4 text-slate-700">08 Mei 2026</td>
+                    <td class="px-5 py-4 font-semibold text-slate-900">Workshop UMKM</td>
+                    <td class="px-5 py-4">
+                      <span class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700 ring-1 ring-amber-200">Diproses</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-4 text-slate-700">06 Mei 2026</td>
+                    <td class="px-5 py-4 font-semibold text-slate-900">Verifikasi Laporan</td>
+                    <td class="px-5 py-4">
+                      <span class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800 ring-1 ring-emerald-200">Menunggu</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="flex flex-col gap-3 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <p class="text-xs text-slate-500">Menampilkan 4 data</p>
+              <div class="flex items-center gap-2">
+                <button class="rounded-2xl border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-emerald-50 transition">Prev</button>
+                <button class="rounded-2xl bg-islamic-green px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 transition">Next</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const API_BASE_URL = window.API_BASE_URL || 'http://localhost:3000';
+
+      async function fetchMembers() {
+        const jwt = localStorage.getItem('admin_jwt');
+        const membersTableLoading = document.getElementById('membersTableLoading');
+        const tbody = document.querySelector('section table tbody');
+
+        if (!jwt) {
+          window.location.href = './login.html';
+          return;
+        }
+
+        if (membersTableLoading) {
+          membersTableLoading.classList.remove('hidden');
+        }
+
+        try {
+          const res = await fetch(`${API_BASE_URL}/api/members`, {
+            method: 'GET',
+            headers: { Authorization: `Bearer ${jwt}` },
+          });
+
+          if (!res.ok) {
+            if (res.status === 401) window.location.href = './login.html';
+            throw new Error('Gagal mengambil data members');
+          }
+
+          const members = await res.json();
+
+          // Replace rows (limit to 4)
+          tbody.innerHTML = '';
+          const rows = Array.isArray(members) ? members.slice(0, 4) : [];
+
+          for (const m of rows) {
+            const tr = document.createElement('tr');
+
+            // Map to the existing table columns (Date/Activity Name/Status)
+            // Date -> join_date, Activity Name -> name (and position), Status -> position
+            const dateCell = '-';
+            const activityName = `${m.nama ?? '-'}${m.jabatan ? ` (${m.jabatan})` : ''}`;
+            const status = m.status_keanggotaan ?? '-';
+
+            tr.innerHTML = `
+              <td class="px-5 py-4 text-slate-700">${dateCell}</td>
+              <td class="px-5 py-4 font-semibold text-slate-900">${activityName}</td>
+              <td class="px-5 py-4">
+                <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-3 py-1 text-xs font-bold text-islamic-green ring-1 ring-islamic-green/20">${status}</span>
+              </td>
+            `;
+
+            tbody.appendChild(tr);
+          }
+        } catch (err) {
+          if (tbody) {
+            tbody.innerHTML = `
+              <tr>
+                <td class="px-5 py-4 text-slate-700" colspan="3">${err?.message || 'Terjadi kesalahan'}</td>
+              </tr>
+            `;
+          }
+        } finally {
+          if (membersTableLoading) {
+            membersTableLoading.classList.add('hidden');
+          }
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        fetchMembers();
+
+        // Logout (if user clicks Keluar)
+        const profileMenu = document.getElementById('profileMenu');
+        const logoutLink = profileMenu ? profileMenu.querySelector('a[href="#"].text-islamic-green') : null;
+        if (logoutLink) {
+          logoutLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('admin_jwt');
+            window.location.href = './login.html';
+          });
+        }
+      });
+
+      // Mobile sidebar toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const sidebar = document.getElementById('sidebar');
+      const backdrop = document.getElementById('backdrop');
+
+      function openSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        backdrop.classList.remove('hidden');
+        backdrop.classList.add('block');
+      }
+
+      function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        backdrop.classList.add('hidden');
+        backdrop.classList.remove('block');
+      }
+
+      if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+          // only for md- (mobile)
+          if (sidebar.classList.contains('-translate-x-full')) openSidebar();
+          else closeSidebar();
+        });
+      }
+
+      if (backdrop) {
+        backdrop.addEventListener('click', closeSidebar);
+      }
+
+      // Profile dropdown
+      const profileBtn = document.getElementById('profileBtn');
+      const profileMenu = document.getElementById('profileMenu');
+
+      function toggleMenu() {
+        profileMenu.classList.toggle('hidden');
+      }
+
+      if (profileBtn && profileMenu) {
+        profileBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleMenu();
+        });
+
+        document.addEventListener('click', () => {
+          if (!profileMenu.classList.contains('hidden')) profileMenu.classList.add('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>
+

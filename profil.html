@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - GP Ansor Ranting Kujorowesi</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "islamic-green": "#008000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      :focus-visible {
+        outline: 3px solid rgba(0, 128, 0, 0.5);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-900">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 border-b border-emerald-200/60 bg-white/90 backdrop-blur">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+              <span class="text-islamic-green font-extrabold">GP</span>
+            </div>
+            <div class="leading-tight">
+              <p class="text-sm font-semibold text-slate-900">GP Ansor</p>
+              <p class="text-xs text-slate-600">Ranting Kujorowesi</p>
+            </div>
+          </div>
+
+          <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+            <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-islamic-green transition">Home</a>
+            <a href="profil.html" class="text-sm font-medium text-islamic-green font-semibold transition">Profil</a>
+            <a href="program-kerja.html" class="text-sm font-medium text-slate-700 hover:text-islamic-green transition">Program Kerja</a>
+            <a href="berita.html" class="text-sm font-medium text-slate-700 hover:text-islamic-green transition">Berita</a>
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button
+            type="button"
+            class="md:hidden inline-flex items-center justify-center rounded-xl border border-emerald-200 px-3 py-2 text-slate-700 hover:bg-emerald-50 transition"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            id="mobileMenuBtn"
+          >
+            <span class="sr-only">Open menu</span>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 6h16" />
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden" id="mobile-menu" hidden>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-4">
+          <div class="flex flex-col gap-2">
+            <a href="index.html" class="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:text-islamic-green hover:bg-emerald-50 transition">Home</a>
+            <a href="profil.html" class="rounded-xl px-3 py-2 text-sm font-semibold text-islamic-green bg-emerald-50 transition">Profil</a>
+            <a href="program-kerja.html" class="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:text-islamic-green hover:bg-emerald-50 transition">Program Kerja</a>
+            <a href="berita.html" class="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:text-islamic-green hover:bg-emerald-50 transition">Berita</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section Profil -->
+    <section class="relative overflow-hidden bg-islamic-green/5">
+      <div class="absolute inset-0" aria-hidden="true">
+        <svg class="h-full w-full" preserveAspectRatio="none" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,100 C300,20 600,180 1200,60 L1200,0 L0,0 Z" fill="rgba(0,128,0,0.06)" />
+        </svg>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 rounded-full bg-islamic-green/10 px-4 py-2 text-islamic-green ring-1 ring-islamic-green/20">
+            <span class="h-2 w-2 rounded-full bg-islamic-green"></span>
+            <span class="text-xs font-semibold tracking-wide">Tentang Kami</span>
+          </div>
+          <h1 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            Profil GP Ansor Ranting Kujorowesi
+          </h1>
+          <p class="mt-4 max-w-2xl text-base sm:text-lg text-slate-600">
+            Mengenal lebih dekat sejarah, visi, misi, struktur organisasi, dan nilai-nilai yang menjadi fondasi pergerakan kami.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sejarah -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
+      <div class="grid gap-10 lg:grid-cols-2 items-center">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Sejarah Singkat</h2>
+          <div class="mt-4 space-y-4 text-slate-600 leading-relaxed">
+            <p>
+              GP Ansor Ranting Kujorowesi lahir dari semangat pemuda desa yang ingin menghidupkan kembali nilai-nilai keislaman Ahlussunnah wal Jama'ah di tengah arus modernisasi. Berdiri sejak tahun 2010, organisasi ini berawal dari majelis dzikir kecil yang diadakan di musholla desa.
+            </p>
+            <p>
+              Seiring berjalannya waktu, antusiasme pemuda Kujorowesi terhadap pembinaan ruhiyah dan kegiatan sosial semakin besar. Pada tahun 2012, GP Ansor Ranting Kujorowesi resmi dideklarasikan dan terdaftar sebagai ranting di bawah Pimpinan Cabang GP Ansor setempat.
+            </p>
+            <p>
+              Kini, GP Ansor Ranting Kujorowesi telah menjadi wadah bagi lebih dari 1.200 pemuda yang aktif dalam berbagai kegiatan spiritual, sosial, dan ekonomi. Organisasi ini terus berkembang dengan program-program yang relevan dengan kebutuhan masyarakat.
+            </p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-4 py-2 text-sm font-semibold text-islamic-green ring-1 ring-islamic-green/20">Berdiri 2012</span>
+            <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-4 py-2 text-sm font-semibold text-islamic-green ring-1 ring-islamic-green/20">1.200+ Anggota</span>
+            <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-4 py-2 text-sm font-semibold text-islamic-green ring-1 ring-islamic-green/20">12 Tahun Berkhidmat</span>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-emerald-200 bg-gradient-to-b from-emerald-50 to-white p-6">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center shrink-0">
+              <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-900">Nilai-Nilai Dasar</p>
+              <ul class="mt-3 space-y-3 text-sm text-slate-600">
+                <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span><span><strong>Keislaman</strong> — Berpegang teguh pada Ahlussunnah wal Jama'ah</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span><span><strong>Kebangsaan</strong> — Menjaga NKRI dan Pancasila</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span><span><strong>Kemandirian</strong> — Mendorong ekonomi umat</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span><span><strong>Kekeluargaan</strong> — Semangat gotong royong</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visi Misi -->
+    <section class="bg-emerald-50/60 py-14 sm:py-18">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Visi & Misi</h2>
+          <p class="mt-3 text-slate-600">Arah gerak GP Ansor Ranting Kujorowesi: spiritual yang kuat, pelayanan yang nyata, dan pemberdayaan yang berkelanjutan.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <div class="rounded-3xl border border-emerald-200 bg-white p-6 sm:p-8 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="h-12 w-12 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-extrabold text-slate-900">Visi</h3>
+            </div>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Menjadi pemuda yang berakhlak, berilmu, dan siap berkhidmat melalui gerakan spiritual dan sosial untuk kemaslahatan umat dan negeri.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-4 py-2 text-sm font-semibold text-islamic-green ring-1 ring-islamic-green/20">Berakhlak</span>
+              <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-4 py-2 text-sm font-semibold text-islamic-green ring-1 ring-islamic-green/20">Istiqamah</span>
+              <span class="inline-flex items-center rounded-full bg-islamic-green/10 px-4 py-2 text-sm font-semibold text-islamic-green ring-1 ring-islamic-green/20">Bermanfaat</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-emerald-200 bg-white p-6 sm:p-8 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="h-12 w-12 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18h6" />
+                  <path d="M10 22h4" />
+                  <path d="M12 2a7 7 0 0 0-7 7c0 4.4 3 6.5 3 10h8c0-3.5 3-5.6 3-10a7 7 0 0 0-7-7z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-extrabold text-slate-900">Misi</h3>
+            </div>
+            <ul class="mt-4 space-y-3 text-slate-600">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span> Membina ruhiyah dan akhlak melalui majelis dzikir, tausiyah, dan kajian rutin.</li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span> Menguatkan kesiapsiagaan melalui Banser dan pelayanan masyarakat.</li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span> Mendorong pemberdayaan ekonomi lewat pelatihan, pendampingan UMKM, dan jejaring.</li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span> Memperkuat solidaritas sosial melalui bakti sosial dan kerja sama lintas komunitas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Struktur Organisasi -->
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-18">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Struktur Organisasi</h2>
+        <p class="mt-3 text-slate-600">Kepengurusan GP Ansor Ranting Kujorowesi periode 2024-2027.</p>
+      </div>
+
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
+          <div class="mx-auto h-16 w-16 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+            <svg class="h-8 w-8 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <p class="mt-4 text-sm font-bold text-slate-900">Ketua Ranting</p>
+          <p class="mt-1 text-xs text-slate-500">Ahmad Fauzi</p>
+        </div>
+
+        <div class="rounded-2xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
+          <div class="mx-auto h-16 w-16 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+            <svg class="h-8 w-8 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <p class="mt-4 text-sm font-bold text-slate-900">Wakil Ketua</p>
+          <p class="mt-1 text-xs text-slate-500">M. Syafi'i</p>
+        </div>
+
+        <div class="rounded-2xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
+          <div class="mx-auto h-16 w-16 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+            <svg class="h-8 w-8 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+            </svg>
+          </div>
+          <p class="mt-4 text-sm font-bold text-slate-900">Sekretaris</p>
+          <p class="mt-1 text-xs text-slate-500">Ali Maksum</p>
+        </div>
+
+        <div class="rounded-2xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
+          <div class="mx-auto h-16 w-16 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+            <svg class="h-8 w-8 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10H3" />
+              <path d="M21 14H3" />
+              <path d="M14 6V18" />
+              <path d="M10 6V18" />
+              <path d="M8 6h8" />
+            </svg>
+          </div>
+          <p class="mt-4 text-sm font-bold text-slate-900">Bendahara</p>
+          <p class="mt-1 text-xs text-slate-500">Siti Aminah</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid gap-5 sm:grid-cols-3">
+        <div class="rounded-2xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
+          <p class="text-sm font-bold text-slate-900">Ketua Bidang Kaderisasi</p>
+          <p class="mt-1 text-xs text-slate-500">M. Khairul Anam</p>
+        </div>
+        <div class="rounded-2xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
+          <p class="text-sm font-bold text-slate-900">Ketua Bidang Dakwah</p>
+          <p class="mt-1 text-xs text-slate-500">A. Ghufron</p>
+        </div>
+        <div class="rounded-2xl border border-emerald-200 bg-white p-5 text-center shadow-sm">
+          <p class="text-sm font-bold text-slate-900">Ketua Bidang Ekonomi</p>
+          <p class="mt-1 text-xs text-slate-500">H. Nur Salim</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Unggulan -->
+    <section class="bg-emerald-50/60 py-14 sm:py-18">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Program Unggulan</h2>
+          <p class="mt-3 text-slate-600">Tiga pilar utama yang menjadi fokus GP Ansor Ranting Kujorowesi.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-3">
+          <div class="rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+            <div class="h-12 w-12 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+              <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-extrabold text-slate-900">Spiritual</h3>
+            <p class="mt-3 text-sm text-slate-600">Majelis dzikir rutin, kajian kitab kuning, dan pembinaan akhlak bagi pemuda.</p>
+          </div>
+          <div class="rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+            <div class="h-12 w-12 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+              <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" />
+                <path d="M9 12l2 2 4-5" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-extrabold text-slate-900">Sosial</h3>
+            <p class="mt-3 text-sm text-slate-600">Banser siaga, bakti sosial, dan pelayanan masyarakat dalam berbagai kegiatan.</p>
+          </div>
+          <div class="rounded-3xl border border-emerald-200 bg-white p-6 shadow-sm">
+            <div class="h-12 w-12 rounded-2xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+              <svg class="h-6 w-6 text-islamic-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 1v22" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-extrabold text-slate-900">Ekonomi</h3>
+            <p class="mt-3 text-sm text-slate-600">Pelatihan UMKM, pendampingan usaha, dan pengembangan koperasi pemuda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="border-t border-emerald-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid gap-8 md:grid-cols-3">
+          <div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-islamic-green/10 ring-1 ring-islamic-green/20 flex items-center justify-center">
+                <span class="text-islamic-green font-extrabold">GP</span>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-slate-900">GP Ansor</p>
+                <p class="text-xs text-slate-600">Ranting Kujorowesi</p>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+              Menjaga Tradisi, Membangun Negeri.
+            </p>
+          </div>
+
+          <div>
+            <p class="text-sm font-bold text-slate-900">Kontak</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2">
+                <span class="mt-1 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span>
+                <span>Jl. Contoh No. 123, Kujorowesi</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-1 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span>
+                <a class="hover:text-islamic-green transition" href="tel:+628123456789">+62 812-3456-789</a>
+              </li>
+              <li class="flex gap-2">
+                <span class="mt-1 h-2 w-2 rounded-full bg-islamic-green shrink-0"></span>
+                <a class="hover:text-islamic-green transition" href="mailto:info@gpansor-kujorowesi.org">info@gpansor-kujorowesi.org</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-bold text-slate-900">Media Sosial</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <a class="rounded-full border border-emerald-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-islamic-green hover:text-islamic-green transition" href="#">Instagram</a>
+              <a class="rounded-full border border-emerald-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-islamic-green hover:text-islamic-green transition" href="#">Facebook</a>
+              <a class="rounded-full border border-emerald-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-islamic-green hover:text-islamic-green transition" href="#">YouTube</a>
+              <a class="rounded-full border border-emerald-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-islamic-green hover:text-islamic-green transition" href="#">TikTok</a>
+            </div>
+
+            <p class="mt-4 text-xs text-slate-500">© <span id="year"></span> GP Ansor Ranting Kujorowesi. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('mobileMenuBtn');
+      const menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          const isHidden = menu.hasAttribute('hidden');
+          if (isHidden) {
+            menu.removeAttribute('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+          } else {
+            menu.setAttribute('hidden', '');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
